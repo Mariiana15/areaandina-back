@@ -46,7 +46,7 @@ func getZones(zone *[]DataForestZone) error {
 
 	var db = newConnect()
 	var z DataForestZone
-	response, err := db.Query("Select t.Zone, AVG(t.Summary)  from (select * from Data_Forest where `Type`in ('humedad', 'temperatura', 'humedad suelo') ORDER BY Date DESC  limit 6) t group BY t.Zone;")
+	response, err := db.Query("Select t.Zone, AVG(t.Summary)  from (select * from Data_Forest where `Type`in ('temperatura') ORDER BY Date DESC) t group BY t.Zone limit 20;")
 	if err != nil {
 		fmt.Println(err)
 		return err
