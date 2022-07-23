@@ -17,7 +17,7 @@ type dbManager interface {
 }
 
 func newConnect() *sql.DB {
-	db, err := sql.Open("mysql", "dbforest1:dbforest1@tcp(localhost:3306)/dbforest1")
+	db, err := sql.Open("mysql", "dbforest1:dbforest1@tcp(35.202.243.156:3306)/dbforest1")
 	if err != nil {
 		fmt.Println(err.Error())
 	}
