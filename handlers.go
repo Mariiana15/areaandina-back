@@ -17,18 +17,6 @@ func GetZonesSummary(write_ http.ResponseWriter, req *http.Request) {
 	gen.Id = "La sabana"
 	gen.Temperature = 38
 	var zoneArray []ZoneGeneric
-	￼
-	￼
-	JOSE LUIS PARRA BELLO
-	￼
-	￼
-	Mariana Andrea Lemus Gil
-	￼
-	￼
-	JOSE LUIS PARRA BELLO
-	￼
-	￼
-	
 	var zones []DataForestZone
 	getZones(&zones)
 	var t float64
@@ -177,7 +165,7 @@ func getZoneDataCarbono(zone *Zone, summary []DataSummary) []DataSummary {
 
 	df, _ := getDataZone(zone.Id, "carbono")
 	var data DataSummary
-	data.D0 = 2000
+	data.D0 = 10000
 	data.D1 = df[0].Summary
 	data.D2 = 0
 	data.D3 = 0
