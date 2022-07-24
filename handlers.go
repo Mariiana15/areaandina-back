@@ -17,7 +17,18 @@ func GetZonesSummary(write_ http.ResponseWriter, req *http.Request) {
 	gen.Id = "La sabana"
 	gen.Temperature = 38
 	var zoneArray []ZoneGeneric
-
+	￼
+	￼
+	JOSE LUIS PARRA BELLO
+	￼
+	￼
+	Mariana Andrea Lemus Gil
+	￼
+	￼
+	JOSE LUIS PARRA BELLO
+	￼
+	￼
+	
 	var zones []DataForestZone
 	getZones(&zones)
 	var t float64
@@ -184,11 +195,11 @@ func getZoneDataCarbono(zone *Zone, summary []DataSummary) []DataSummary {
 	if len(df) > 4 {
 		data.D5 = df[4].Summary
 	}
-	data.Desc = "La cantidad de particulas de carbono en el aire son."
+	data.Desc = "La cantidad de particulas por millon de carbono son."
 	data.Id = "4"
 	data.Image = "https://images.unsplash.com/photo-1531418580067-04bc72baa73c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=80"
 	data.Title = "Particulas CO2"
-	data.Und = "Ud/M"
+	data.Und = "ppm"
 	data.Alert = "_"
 	var m map[int32][]int32
 	err := json.Unmarshal([]byte(fmt.Sprintln(df[0].Data)), &m)
